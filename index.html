@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Vexar - The ultimate macOS menu bar app for seamless Discord experience. Bypass restrictions and enjoy unrestricted internet with one click.">
+    <meta name="keywords" content="Vexar, macOS, Discord, SpoofDPI, menu bar app, internet freedom">
+    <meta name="author" content="Vexar Team">
+    <meta property="og:title" content="Vexar - Seamless Discord Experience for macOS">
+    <meta property="og:description" content="One-click solution for unrestricted Discord access on macOS">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/og-image.png">
+    <meta property="og:url" content="https://vexar.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="assets/og-image.png">
+    <meta name="theme-color" content="#667eea">
+
+    <title data-i18n="meta.title">Vexar - Seamless Discord Experience for macOS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/vexar-logo.png">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animated">
+        <div class="bg-gradient"></div>
+        <div class="bg-mesh"></div>
+        <div class="floating-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <div class="orb orb-4"></div>
+            <div class="orb orb-5"></div>
+        </div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="logo-icon">
+                    <img src="assets/vexar-logo.png" alt="Vexar" width="32" height="32">
+                </div>
+                <span class="logo-text">Vexar</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#features" class="nav-link" data-i18n="nav.features">Features</a>
+                <a href="#how-it-works" class="nav-link" data-i18n="nav.howItWorks">How It Works</a>
+                <a href="#download" class="nav-link" data-i18n="nav.download">Download</a>
+                <a href="https://github.com/MuratGuelr/vexar-app" target="_blank" class="nav-link">GitHub</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="lang-switcher" id="langSwitcher" aria-label="Switch Language">
+                    <span class="lang-icon">🌐</span>
+                    <span class="lang-text" id="currentLang">EN</span>
+                </button>
+                <a href="#download" class="nav-cta" data-i18n="nav.getVexar">Get Vexar</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll">
+                <span class="badge-dot"></span>
+                <span data-i18n="hero.badge">v1.0.0 Now Available</span>
+            </div>
+
+            <h1 class="hero-title animate-on-scroll">
+                <span data-i18n="hero.titleLine1">Seamless Discord</span>
+                <span class="gradient-text" data-i18n="hero.titleLine2">Experience on macOS</span>
+            </h1>
+
+            <p class="hero-description animate-on-scroll" data-i18n="hero.description">
+                One-click solution for unrestricted Discord access. Vexar lives in your menu bar,
+                silently ensuring you never miss a moment with friends.
+            </p>
+
+            <div class="hero-actions animate-on-scroll">
+                <a href="https://github.com/MuratGuelr/vexar-app/releases/download/v1.0.0/Vexar-v1.0.0.zip"
+                    class="btn btn-primary" download>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span data-i18n="hero.downloadBtn">Download for macOS</span>
+                </a>
+                <a href="#how-it-works" class="btn btn-secondary">
+                    <span data-i18n="hero.learnMore">Learn More</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="hero-stats animate-on-scroll">
+                <div class="stat">
+                    <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label" data-i18n="hero.stat1">Free & Open Source</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="1">0</span>
+                    <span class="stat-label" data-i18n="hero.stat2">Click to Connect</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="0">0</span><span class="stat-suffix">ms</span>
+                    <span class="stat-label" data-i18n="hero.stat3">Latency Impact</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual animate-on-scroll">
+            <div class="app-preview">
+                <div class="app-window">
+                    <div class="window-header">
+                        <div class="window-controls">
+                            <span class="control red"></span>
+                            <span class="control yellow"></span>
+                            <span class="control green"></span>
+                        </div>
+                        <span class="window-title">Vexar</span>
+                    </div>
+                    <div class="window-content">
+                        <div class="status-indicator connected">
+                            <div class="pulse-ring"></div>
+                            <div class="pulse-core"></div>
+                        </div>
+                        <p class="status-text" data-i18n="hero.statusConnected">Connected</p>
+                        <p class="status-sub" data-i18n="hero.statusSub">Discord is running smoothly</p>
+
+                        <div class="app-stats">
+                            <div class="app-stat">
+                                <span class="app-stat-icon">⚡</span>
+                                <div class="app-stat-info">
+                                    <span class="app-stat-value">23ms</span>
+                                    <span class="app-stat-label">Ping</span>
+                                </div>
+                            </div>
+                            <div class="app-stat">
+                                <span class="app-stat-icon">📡</span>
+                                <div class="app-stat-info">
+                                    <span class="app-stat-value">Active</span>
+                                    <span class="app-stat-label">Proxy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menubar-preview">
+                    <div class="menubar-icons">
+                        <span class="mb-icon">🔋</span>
+                        <span class="mb-icon">📶</span>
+                        <span class="mb-icon vexar-icon active">
+                            <svg width="18" height="18" viewBox="0 0 32 32" fill="none">
+                                <path d="M16 2L28 8V24L16 30L4 24V8L16 2Z" fill="#4ade80" />
+                            </svg>
+                        </span>
+                        <span class="mb-time">10:30</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="floating-elements">
+                <div class="float-card float-1">
+                    <span class="float-icon">🔒</span>
+                    <span data-i18n="hero.float1">Privacy First</span>
+                </div>
+                <div class="float-card float-2">
+                    <span class="float-icon">⚡</span>
+                    <span data-i18n="hero.float2">Lightning Fast</span>
+                </div>
+                <div class="float-card float-3">
+                    <span class="float-icon">🍎</span>
+                    <span data-i18n="hero.float3">Native macOS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="trusted-section">
+        <div class="container">
+            <p class="trusted-text animate-on-scroll" data-i18n="trusted.text">Trusted by Discord users worldwide</p>
+            <div class="trusted-logos animate-on-scroll">
+                <div class="logo-scroll">
+                    <span class="tech-logo">🎮 Gamers</span>
+                    <span class="tech-logo">💻 Developers</span>
+                    <span class="tech-logo">🎨 Designers</span>
+                    <span class="tech-logo">📚 Students</span>
+                    <span class="tech-logo">🏢 Professionals</span>
+                    <span class="tech-logo">🎵 Musicians</span>
+                    <span class="tech-logo">🎮 Gamers</span>
+                    <span class="tech-logo">💻 Developers</span>
+                    <span class="tech-logo">🎨 Designers</span>
+                    <span class="tech-logo">📚 Students</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge" data-i18n="features.badge">Features</span>
+                <h2 class="section-title" data-i18n="features.title">Everything you need,<br>nothing you don't</h2>
+                <p class="section-description" data-i18n="features.description">
+                    Vexar is designed to be invisible. It works quietly in the background,
+                    ensuring you have uninterrupted access to Discord.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card feature-large animate-on-scroll">
+                    <div class="feature-visual">
+                        <div class="feature-animation pulse-animation">
+                            <div class="pulse-center">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <circle cx="24" cy="24" r="20" stroke="url(#pulseGrad)" stroke-width="2" />
+                                    <circle cx="24" cy="24" r="12" fill="url(#pulseGrad)" />
+                                    <defs>
+                                        <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#4ade80" />
+                                            <stop offset="100%" style="stop-color:#22c55e" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="pulse-wave pulse-wave-1"></div>
+                            <div class="pulse-wave pulse-wave-2"></div>
+                            <div class="pulse-wave pulse-wave-3"></div>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-i18n="features.oneClick.title">One-Click Connection</h3>
+                        <p class="feature-description" data-i18n="features.oneClick.description">
+                            Connect with a single click from your menu bar. No complicated setup,
+                            no configuration files. Just pure simplicity.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.privacy.title">Privacy First</h3>
+                    <p class="feature-description" data-i18n="features.privacy.description">
+                        Your data stays on your device. No tracking, no logs, no compromise.
+                    </p>
+                </div>
+
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.fast.title">Lightning Fast</h3>
+                    <p class="feature-description" data-i18n="features.fast.description">
+                        Zero latency impact. Your Discord experience remains smooth and responsive.
+                    </p>
+                </div>
+
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.native.title">Native macOS</h3>
+                    <p class="feature-description" data-i18n="features.native.description">
+                        Built with SwiftUI for a seamless macOS experience. Feels right at home.
+                    </p>
+                </div>
+
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3v18" />
+                            <path d="M3 12h18" />
+                            <path d="M5 5l14 14" />
+                            <path d="M19 5L5 19" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.opensource.title">Open Source</h3>
+                    <p class="feature-description" data-i18n="features.opensource.description">
+                        Completely free and open source. Contribute, audit, or fork as you like.
+                    </p>
+                </div>
+
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.auto.title">Auto Start</h3>
+                    <p class="feature-description" data-i18n="features.auto.description">
+                        Launch at login option. Set it once and forget about it forever.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-section" id="how-it-works">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge" data-i18n="how.badge">How It Works</span>
+                <h2 class="section-title" data-i18n="how.title">Simple. Elegant. Effective.</h2>
+                <p class="section-description" data-i18n="how.description">
+                    Get started in minutes with our streamlined setup process.
+                </p>
+            </div>
+
+            <div class="steps-wrapper">
+
+
+                <div class="step animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title" data-i18n="how.step1.title">Download & Install</h3>
+                        <p class="step-description" data-i18n="how.step1.description">
+                            Download Vexar from GitHub releases. Drag it to your Applications folder.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="step-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title" data-i18n="how.step2.title">Complete Setup</h3>
+                        <p class="step-description" data-i18n="how.step2.description">
+                            Follow the one-time setup wizard to install required components automatically.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="step-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title" data-i18n="how.step3.title">Click & Connect</h3>
+                        <p class="step-description" data-i18n="how.step3.description">
+                            Click the Vexar icon in your menu bar and hit connect. That's it!
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="step-icon-wrapper success">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge" data-i18n="tech.badge">Built With</span>
+                <h2 class="section-title" data-i18n="tech.title">Modern Technology Stack</h2>
+            </div>
+
+            <div class="tech-grid animate-on-scroll">
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                    </div>
+                    <h4>SwiftUI</h4>
+                    <p data-i18n="tech.swiftui">Native macOS interface</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h4>SpoofDPI</h4>
+                    <p data-i18n="tech.spoofdpi">Bypass engine</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.552-.259-1.165-.438-1.349-.854-.068-.248-.078-.382-.034-.529.113-.484.687-.629 1.137-.495.293.086.567.319.735.665.775-.442.775-.442 1.316-.775-.19-.338-.293-.479-.422-.571-.478-.478-1.121-.719-2.161-.689l-.531.068c-.513.156-.997.439-1.292.854-.094.139-.178.296-.234.465-.299.854-.096 2.103.729 2.647.801.563 1.972.681 2.125 1.207.148.689-.513 1.061-1.265.964-.572-.111-.879-.458-1.121-.893l-1.368.698c.158.363.325.525.571.854.96.898 3.266 1.021 3.927-.466.041-.059.082-.116.119-.171.357-.69.384-1.432.076-2.318zm-5.882-.826c-.21-.494-.331-.811-.593-1.181-.478-.68-1.102-.991-1.924-1.021-.892.027-1.711.357-2.298 1.236l1.053.742c.35-.52.703-.858 1.245-.858.513-.021.856.281 1.061.733l.124.281c-.665.359-1.369.621-2.073.915-.684.287-1.12.654-1.313 1.14-.099.251-.161.553-.161.876 0 .633.249 1.146.683 1.501.433.353.966.529 1.582.529.859 0 1.503-.313 1.976-.934l.057.057c.068.11.142.216.223.317l1.137-.001-.001-.036c-.195-.24-.319-.528-.319-.86 0-.042-.008-1.315-.008-2.437l.009.001zm-1.316 2.458c-.279.328-.644.529-1.108.529-.281 0-.511-.092-.683-.281-.171-.189-.258-.433-.258-.733 0-.363.137-.643.409-.837.198-.141.478-.288.791-.409.342-.132.746-.297 1.158-.473v.429c-.001.69-.105 1.404-.309 1.775z" />
+                        </svg>
+                    </div>
+                    <h4>Homebrew</h4>
+                    <p data-i18n="tech.homebrew">Package manager</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>
+                    </div>
+                    <h4>Open Source</h4>
+                    <p data-i18n="tech.opensource">MIT License</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge" data-i18n="testimonials.badge">Testimonials</span>
+                <h2 class="section-title" data-i18n="testimonials.title">Loved by users</h2>
+            </div>
+
+            <div class="testimonials-grid animate-on-scroll">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p data-i18n="testimonials.t1.text">"Finally, a solution that just works! I've been struggling
+                            with Discord access for months, and Vexar solved it in seconds."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🎮</div>
+                        <div class="author-info">
+                            <span class="author-name" data-i18n="testimonials.t1.name">Alex K.</span>
+                            <span class="author-role" data-i18n="testimonials.t1.role">Gamer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p data-i18n="testimonials.t2.text">"Clean, minimal, and does exactly what it promises. The
+                            SwiftUI interface is beautiful and fits perfectly with macOS."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">💻</div>
+                        <div class="author-info">
+                            <span class="author-name" data-i18n="testimonials.t2.name">Sarah M.</span>
+                            <span class="author-role" data-i18n="testimonials.t2.role">Developer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p data-i18n="testimonials.t3.text">"I love that it's open source. I can see exactly what it
+                            does, and there's no shady background activity. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🔐</div>
+                        <div class="author-info">
+                            <span class="author-name" data-i18n="testimonials.t3.name">Mike R.</span>
+                            <span class="author-role" data-i18n="testimonials.t3.role">Security Enthusiast</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge" data-i18n="faq.badge">FAQ</span>
+                <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-wrapper animate-on-scroll">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q1.question">What is Vexar?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q1.answer">Vexar is a macOS menu bar application that helps you access Discord
+                            without restrictions. It uses SpoofDPI technology to bypass network limitations while
+                            maintaining your privacy.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q2.question">Is Vexar safe to use?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q2.answer">Yes! Vexar is completely open source, which means anyone can review
+                            the code. We don't collect any personal data, and all connections stay local on your device.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q3.question">Does it affect my internet speed?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q3.answer">No, Vexar operates locally and has zero impact on your internet
+                            latency. Your Discord experience remains as fast as ever.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q4.question">What macOS version is required?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q4.answer">Vexar requires macOS 13.0 (Ventura) or later. It's built with the
+                            latest SwiftUI features to provide the best possible experience.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q5.question">How do I get support?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q5.answer">You can open an issue on our GitHub repository, and we'll help you
+                            as soon as possible. The community is also very helpful!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="container">
+            <div class="download-wrapper animate-on-scroll">
+                <div class="download-glow"></div>
+                <div class="download-content">
+                    <span class="download-badge" data-i18n="download.badge">Free Download</span>
+                    <h2 class="download-title" data-i18n="download.title">Ready to start?</h2>
+                    <p class="download-description" data-i18n="download.description">
+                        Download Vexar now and enjoy seamless Discord experience on your Mac.
+                    </p>
+
+                    <div class="download-buttons">
+                        <a href="https://github.com/MuratGuelr/vexar-app/releases/download/v1.0.0/Vexar-v1.0.0.zip"
+                            class="btn btn-download" download>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            <div class="btn-text">
+                                <span class="btn-label" data-i18n="download.button">Download</span>
+                                <span class="btn-sub">macOS 13.0+ • ZIP</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/MuratGuelr/vexar-app" class="btn btn-github" target="_blank">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                            </svg>
+                            <span data-i18n="download.github">View on GitHub</span>
+                        </a>
+                    </div>
+
+                    <div class="download-note">
+                        <span class="note-icon">📦</span>
+                        <span data-i18n="download.note">Download the ZIP file, extract it, and drag Vexar.app to your
+                            Applications folder.</span>
+                    </div>
+
+                    <div class="download-info">
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span data-i18n="download.info1">No account required</span>
+                        </div>
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span data-i18n="download.info2">100% Free & Open Source</span>
+                        </div>
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span data-i18n="download.info3">Privacy focused</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <div class="logo-icon">
+                            <img src="assets/vexar-logo.png" alt="Vexar" width="32" height="32">
+                        </div>
+                        <span>Vexar</span>
+                    </a>
+                    <p class="footer-tagline" data-i18n="footer.tagline">Seamless Discord experience for macOS</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.product">Product</h4>
+                        <a href="#features" data-i18n="nav.features">Features</a>
+                        <a href="#download" data-i18n="nav.download">Download</a>
+                        <a href="#how-it-works" data-i18n="nav.howItWorks">How It Works</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.resources">Resources</h4>
+                        <a href="https://github.com/MuratGuelr/vexar-app" target="_blank">GitHub</a>
+                        <a href="https://github.com/MuratGuelr/vexar-app/issues" target="_blank"
+                            data-i18n="footer.issues">Report Issue</a>
+                        <a href="https://github.com/MuratGuelr/vexar-app/releases" target="_blank"
+                            data-i18n="footer.releases">Releases</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.legal">Legal</h4>
+                        <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                        <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2025 Vexar. All rights reserved.</p>
+                <p data-i18n="footer.madeWith">Made with ❤️ for the Discord community</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
