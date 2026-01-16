@@ -85,7 +85,7 @@ const translations = {
         "footer.legal": "Legal",
         "footer.privacy": "Privacy Policy",
         "footer.terms": "Terms of Service",
-        "footer.copyright": "© 2024 Vexar. All rights reserved.",
+        "footer.copyright": "© 2026 Vexar. All rights reserved.",
         "footer.madeWith": "Made with ❤️ for the Discord community",
 
         // Testimonials Section
@@ -113,7 +113,33 @@ const translations = {
         "faq.q4.question": "What macOS version is required?",
         "faq.q4.answer": "Vexar requires macOS 13.0 (Ventura) or later. It's built with the latest SwiftUI features to provide the best possible experience.",
         "faq.q5.question": "How do I get support?",
-        "faq.q5.answer": "You can open an issue on our GitHub repository, and we'll help you as soon as possible. The community is also very helpful!"
+        "faq.q5.answer": "You can open an issue on our GitHub repository, and we'll help you as soon as possible. The community is also very helpful!",
+
+        // Privacy Policy Page
+        "privacy.title": "Privacy Policy",
+        "privacy.lastUpdated": "Last updated: January 16, 2026",
+        "privacy.intro": "At Vexar, we take your privacy seriously. This policy explains what information we collect and how we use it.",
+        "privacy.section1.title": "1. Data Collection",
+        "privacy.section1.content": "Vexar is designed to be privacy-first. We do not collect any personal data, browsing history, or network traffic. All processing happens locally on your device.",
+        "privacy.section2.title": "2. Local Processing",
+        "privacy.section2.content": "Vexar operates as a local proxy. Your network requests are modified on your device to bypass restrictions, but they are never sent to our servers.",
+        "privacy.section3.title": "3. Analytics",
+        "privacy.section3.content": "We may collect anonymous usage statistics (like app launches or feature usage) to improve the application. This data is never linked to your identity.",
+        "privacy.section4.title": "4. Open Source",
+        "privacy.section4.content": "Since Vexar is open source, you can audit our code yourself on GitHub to verify our privacy claims.",
+
+        // Terms of Service Page
+        "terms.title": "Terms of Service",
+        "terms.lastUpdated": "Last updated: January 16, 2026",
+        "terms.intro": "By using Vexar, you agree to the following terms and conditions.",
+        "terms.section1.title": "1. License",
+        "terms.section1.content": "Vexar is released under the MIT License. You are free to use, copy, and modify the software according to the license terms.",
+        "terms.section2.title": "2. Use at Your Own Risk",
+        "terms.section2.content": "Vexar is provided 'as is' without any warranties. We are not responsible for any issues arising from the use of the software.",
+        "terms.section3.title": "3. Fair Use",
+        "terms.section3.content": "You agree not to use Vexar for any illegal activities or to violate the terms of service of third-party platforms like Discord.",
+        "terms.section4.title": "4. Modifications",
+        "terms.section4.content": "We reserve the right to modify these terms at any time. Continued use of the app constitutes acceptance of the new terms."
     },
     tr: {
         // Meta
@@ -200,7 +226,7 @@ const translations = {
         "footer.legal": "Yasal",
         "footer.privacy": "Gizlilik Politikası",
         "footer.terms": "Kullanım Şartları",
-        "footer.copyright": "© 2024 Vexar. Tüm hakları saklıdır.",
+        "footer.copyright": "© 2026 Vexar. Tüm hakları saklıdır.",
         "footer.madeWith": "Discord topluluğu için ❤️ ile yapıldı",
 
         // Testimonials Section
@@ -228,7 +254,33 @@ const translations = {
         "faq.q4.question": "Hangi macOS sürümü gerekli?",
         "faq.q4.answer": "Vexar, macOS 13.0 (Ventura) veya üstünü gerektirir. En iyi deneyimi sağlamak için en son SwiftUI özellikleriyle geliştirilmiştir.",
         "faq.q5.question": "Nasıl destek alabilirim?",
-        "faq.q5.answer": "GitHub deposumuzda bir sorun açabilirsiniz, size en kısa sürede yardımcı olacağız. Topluluk da çok yardımsever!"
+        "faq.q5.answer": "GitHub deposumuzda bir sorun açabilirsiniz, size en kısa sürede yardımcı olacağız. Topluluk da çok yardımsever!",
+
+        // Gizlilik Politikası Sayfası
+        "privacy.title": "Gizlilik Politikası",
+        "privacy.lastUpdated": "Son güncelleme: 16 Ocak 2026",
+        "privacy.intro": "Vexar olarak gizliliğinizi ciddiye alıyoruz. Bu politika, hangi bilgileri topladığımızı ve bunları nasıl kullandığımızı açıklar.",
+        "privacy.section1.title": "1. Veri Toplama",
+        "privacy.section1.content": "Vexar gizlilik öncelikli olarak tasarlanmıştır. Herhangi bir kişisel veri, tarama geçmişi veya ağ trafiği toplamıyoruz. Tüm işlemler cihazınızda yerel olarak gerçekleşir.",
+        "privacy.section2.title": "2. Yerel İşleme",
+        "privacy.section2.content": "Vexar yerel bir proxy olarak çalışır. Ağ istekleriniz, kısıtlamaları aşmak için cihazınızda değiştirilir ancak asla bizim sunucularımıza gönderilmez.",
+        "privacy.section3.title": "3. Analizler",
+        "privacy.section3.content": "Uygulamayı geliştirmek için anonim kullanım istatistikleri (uygulama başlatma veya özellik kullanımı gibi) toplayabiliriz. Bu veriler asla kimliğinizle ilişkilendirilmez.",
+        "privacy.section4.title": "4. Açık Kaynak",
+        "privacy.section4.content": "Vexar açık kaynaklı olduğu için, gizlilik iddialarımızı doğrulamak adına kodumuzu GitHub üzerinden kendiniz denetleyebilirsiniz.",
+
+        // Kullanım Şartları Sayfası
+        "terms.title": "Kullanım Şartları",
+        "terms.lastUpdated": "Son güncelleme: 16 Ocak 2026",
+        "terms.intro": "Vexar'ı kullanarak aşağıdaki şart ve koşulları kabul etmiş sayılırsınız.",
+        "terms.section1.title": "1. Lisans",
+        "terms.section1.content": "Vexar, MIT Lisansı altında yayınlanmıştır. Yazılımı lisans şartlarına göre kullanmakta, kopyalamakta ve değiştirmekte özgürsünüz.",
+        "terms.section2.title": "2. Sorumluluk Reddi",
+        "terms.section2.content": "Vexar 'olduğu gibi' sunulmaktadır ve herhangi bir garanti vermez. Yazılımın kullanımından doğabilecek sorunlardan sorumlu değiliz.",
+        "terms.section3.title": "3. Adil Kullanım",
+        "terms.section3.content": "Vexar'ı yasa dışı faaliyetler için veya Discord gibi üçüncü taraf platformların kullanım şartlarını ihlal etmek için kullanmamayı kabul edersiniz.",
+        "terms.section4.title": "4. Değişiklikler",
+        "terms.section4.content": "Bu şartları dilediğimiz zaman değiştirme hakkımızı saklı tutarız. Uygulamanın kullanımına devam edilmesi, yeni şartların kabul edildiği anlamına gelir."
     }
 };
 

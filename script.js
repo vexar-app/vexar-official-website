@@ -457,9 +457,12 @@ async function fetchLatestRelease() {
             const version = data.tag_name;
 
             // Update all download buttons
-            document.querySelectorAll('.btn-primary, .btn-download').forEach(btn => {
-                btn.href = downloadUrl;
-            });
+            const downloadBtns = document.querySelectorAll('.btn-primary, .btn-download');
+            if (downloadBtns.length > 0) {
+                downloadBtns.forEach(btn => {
+                    btn.href = downloadUrl;
+                });
+            }
 
             // Update version using i18n system
             if (window.i18nInstance) {
