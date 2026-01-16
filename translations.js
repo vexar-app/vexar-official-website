@@ -11,7 +11,7 @@ const translations = {
         "nav.getVexar": "Get Vexar",
 
         // Hero Section
-        "hero.badge": "v1.0.0 Now Available",
+        "hero.badge": "{version} Now Available",
         "hero.titleLine1": "Seamless Discord",
         "hero.titleLine2": "Experience on macOS",
         "hero.description": "One-click solution for unrestricted Discord access. Vexar lives in your menu bar, silently ensuring you never miss a moment with friends.",
@@ -126,7 +126,7 @@ const translations = {
         "nav.getVexar": "Vexar'ı İndir",
 
         // Hero Section
-        "hero.badge": "v1.0.0 Çıktı",
+        "hero.badge": "{version} Yayında",
         "hero.titleLine1": "Kesintisiz Discord",
         "hero.titleLine2": "macOS Deneyimi",
         "hero.description": "Sınırsız Discord erişimi için tek tıklık çözüm. Vexar menü çubuğunuzda yaşar, arkadaşlarınızla hiçbir anı kaçırmamanızı sessizce sağlar.",
@@ -236,6 +236,7 @@ const translations = {
 class I18n {
     constructor() {
         this.currentLang = this.detectLanguage();
+        this.version = 'v1.0.0'; // Default version
         this.init();
     }
 
@@ -264,8 +265,13 @@ class I18n {
         const elements = document.querySelectorAll('[data-i18n]');
         elements.forEach(el => {
             const key = el.getAttribute('data-i18n');
-            const translation = this.getTranslation(key);
+            let translation = this.getTranslation(key);
             if (translation) {
+                // Handle placeholders like {version}
+                if (translation.includes('{version}')) {
+                    translation = translation.replace('{version}', this.version);
+                }
+
                 // Check if it contains HTML (like <br>)
                 if (translation.includes('<')) {
                     el.innerHTML = translation;
@@ -322,6 +328,11 @@ class I18n {
             this.applyTranslations();
             this.updateLangSwitcher();
         }
+    }
+
+    setVersion(version) {
+        this.version = version;
+        this.applyTranslations();
     }
 }
 

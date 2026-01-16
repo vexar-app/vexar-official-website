@@ -1,7 +1,7 @@
 // Vexar Website - Main JavaScript
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize internationalization
-    const i18n = new I18n();
+    window.i18nInstance = new I18n();
 
     // Initialize all components
     initNavbar();
@@ -461,10 +461,9 @@ async function fetchLatestRelease() {
                 btn.href = downloadUrl;
             });
 
-            // Update version badge if it exists
-            const badge = document.querySelector('.hero-badge span[data-i18n="hero.badge"]');
-            if (badge) {
-                badge.textContent = `${version} Now Available`;
+            // Update version using i18n system
+            if (window.i18nInstance) {
+                window.i18nInstance.setVersion(version);
             }
 
             // Update version text in download section
