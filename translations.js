@@ -51,7 +51,7 @@ const translations = {
         "how.title": "Simple. Elegant. Effective.",
         "how.description": "Get started in minutes with our streamlined setup process.",
         "how.step1.title": "Download & Install",
-        "how.step1.description": "Download Vexar from GitHub releases. Drag it to your Applications folder.",
+        "how.step1.description": "Download the Vexar DMG from GitHub. Open it and drag the app to your Applications folder.",
         "how.step2.title": "Complete Setup",
         "how.step2.description": "Follow the one-time setup wizard to install required components automatically.",
         "how.step3.title": "Click & Connect",
@@ -74,7 +74,7 @@ const translations = {
         "download.info1": "No account required",
         "download.info2": "100% Free & Open Source",
         "download.info3": "Privacy focused",
-        "download.note": "Download the ZIP file, extract it, and drag Vexar.app to your Applications folder.",
+        "download.note": "Download the DMG file, open it, and drag Vexar.app to your Applications folder.",
 
         // Footer
         "footer.tagline": "Seamless Discord experience for macOS",
@@ -192,7 +192,7 @@ const translations = {
         "how.title": "Basit. Şık. Etkili.",
         "how.description": "Kolaylaştırılmış kurulum sürecimizle dakikalar içinde başlayın.",
         "how.step1.title": "İndir & Kur",
-        "how.step1.description": "Vexar'ı GitHub releases'ten indirin. Uygulamalar klasörünüze sürükleyin.",
+        "how.step1.description": "Vexar DMG dosyasını indirin. Dosyayı açın ve uygulamayı Uygulamalar klasörüne sürükleyin.",
         "how.step2.title": "Kurulumu Tamamla",
         "how.step2.description": "Gerekli bileşenleri otomatik olarak kurmak için tek seferlik kurulum sihirbazını takip edin.",
         "how.step3.title": "Tıkla & Bağlan",
@@ -215,7 +215,7 @@ const translations = {
         "download.info1": "Hesap gerektirmez",
         "download.info2": "100% Ücretsiz & Açık Kaynak",
         "download.info3": "Gizlilik odaklı",
-        "download.note": "ZIP dosyasını indirin, çıkartın ve Vexar.app'i Uygulamalar klasörüne sürükleyin.",
+        "download.note": "DMG dosyasını indirin, açın ve Vexar.app'i Uygulamalar klasörüne sürükleyin.",
 
         // Footer
         "footer.tagline": "macOS için kesintisiz Discord deneyimi",
