@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initParallaxEffects();
     initFAQ();
+    fetchLatestRelease();
 });
 
 // ============================================
@@ -432,3 +433,48 @@ document.querySelectorAll('.btn-github, a[href*="github"]').forEach(btn => {
         trackEvent('External', 'github_visit', 'Repository');
     });
 });
+
+// ============================================
+// GITHUB RELEASE FETCHING
+// ============================================
+
+async function fetchLatestRelease() {
+    const repo = 'vexar-app/vexar-app';
+    const apiUrl = `https://api.github.com/repos/${repo}/releases/latest`;
+
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+
+        // Find the download asset (usually .dmg or .zip)
+        const asset = data.assets.find(a => a.name.endsWith('.dmg')) ||
+            data.assets.find(a => a.name.endsWith('.zip')) ||
+            data.assets[0];
+
+        if (asset && asset.browser_download_url) {
+            const downloadUrl = asset.browser_download_url;
+            const version = data.tag_name;
+
+            // Update all download buttons
+            document.querySelectorAll('.btn-primary, .btn-download').forEach(btn => {
+                btn.href = downloadUrl;
+            });
+
+            // Update version badge if it exists
+            const badge = document.querySelector('.hero-badge span[data-i18n="hero.badge"]');
+            if (badge) {
+                badge.textContent = `${version} Now Available`;
+            }
+
+            // Update version text in download section
+            const btnSub = document.querySelector('.btn-sub');
+            if (btnSub) {
+                const extension = asset.name.split('.').pop().toUpperCase();
+                btnSub.textContent = `macOS 13.0+ • ${extension}`;
+            }
+        }
+    } catch (error) {
+        console.error('Error fetching latest release:', error);
+    }
+}
