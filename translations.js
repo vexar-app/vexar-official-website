@@ -254,7 +254,7 @@ const translations = {
         "faq.q4.question": "Hangi macOS sürümü gerekli?",
         "faq.q4.answer": "Vexar, macOS 13.0 (Ventura) veya üstünü gerektirir. En iyi deneyimi sağlamak için en son SwiftUI özellikleriyle geliştirilmiştir.",
         "faq.q5.question": "Nasıl destek alabilirim?",
-        "faq.q5.answer": "GitHub deposumuzda bir sorun açabilirsiniz, size en kısa sürede yardımcı olacağız. Topluluk da çok yardımsever!",
+        "faq.q5.answer": "GitHub repomuzda bir sorun açabilirsiniz, size en kısa sürede yardımcı olacağız. Topluluk da çok yardımsever!",
 
         // Gizlilik Politikası Sayfası
         "privacy.title": "Gizlilik Politikası",
