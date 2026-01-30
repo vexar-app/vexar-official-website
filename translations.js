@@ -139,7 +139,8 @@ const translations = {
         "terms.section3.title": "3. Fair Use",
         "terms.section3.content": "You agree not to use Vexar for any illegal activities or to violate the terms of service of third-party platforms like Discord.",
         "terms.section4.title": "4. Modifications",
-        "terms.section4.content": "We reserve the right to modify these terms at any time. Continued use of the app constitutes acceptance of the new terms."
+        "terms.section4.content": "We reserve the right to modify these terms at any time. Continued use of the app constitutes acceptance of the new terms.",
+        "nav.donate": "Buy me a coffee"
     },
     tr: {
         // Meta
@@ -280,7 +281,8 @@ const translations = {
         "terms.section3.title": "3. Adil Kullanım",
         "terms.section3.content": "Vexar'ı yasa dışı faaliyetler için veya Discord gibi üçüncü taraf platformların kullanım şartlarını ihlal etmek için kullanmamayı kabul edersiniz.",
         "terms.section4.title": "4. Değişiklikler",
-        "terms.section4.content": "Bu şartları dilediğimiz zaman değiştirme hakkımızı saklı tutarız. Uygulamanın kullanımına devam edilmesi, yeni şartların kabul edildiği anlamına gelir."
+        "terms.section4.content": "Bu şartları dilediğimiz zaman değiştirme hakkımızı saklı tutarız. Uygulamanın kullanımına devam edilmesi, yeni şartların kabul edildiği anlamına gelir.",
+        "nav.donate": "Bir Kahve Ismarla"
     }
 };
 

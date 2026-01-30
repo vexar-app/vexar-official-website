@@ -381,6 +381,59 @@ img {
     box-shadow: var(--shadow-glow);
 }
 
+.nav-donate {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-donate:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--color-primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.25);
+}
+
+.donate-icon {
+    font-size: 1.2em;
+    filter: none;
+    animation: coffeeShake 3s ease-in-out infinite;
+}
+
+@keyframes coffeeShake {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(0deg);
+    }
+
+    85% {
+        transform: rotate(-10deg);
+    }
+
+    90% {
+        transform: rotate(10deg);
+    }
+
+    95% {
+        transform: rotate(-5deg);
+    }
+}
+
 .mobile-toggle {
     display: none;
     flex-direction: column;
@@ -2244,6 +2297,7 @@ img {
         transition-duration: 0.01ms !important;
     }
 }
+
 /* ============================================
    LEGAL PAGES
    ============================================ */
@@ -2311,12 +2365,26 @@ img {
     .legal-content {
         padding: 120px 20px 60px;
     }
-    
+
     .content-block {
         padding: 24px;
     }
-    
+
     .legal-content h1 {
         font-size: 2rem;
     }
+}
+
+@media (max-width: 768px) {
+    .donate-text {
+        display: none;
+    }
+
+    .nav-donate {
+        padding: 8px;
+    }
+
+    /* Ensure logo text is hidden if needed, or keep it depending on design choice. 
+       Actually, hiding logo text is a common pattern but not requested. 
+       I will stick to hiding donate text. */
 }
