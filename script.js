@@ -439,44 +439,123 @@ document.querySelectorAll('.btn-github, a[href*="github"]').forEach(btn => {
 // ============================================
 
 async function fetchLatestRelease() {
-    const repo = 'vexar-app/vexar-app';
-    const apiUrl = `https://api.github.com/repos/${repo}/releases/latest`;
+    // Repositories
+    const repoMac = 'vexar-app/vexar-app';
+    const repoWin = 'vexar-app/vexar-windows';
+    
+    // API URLs
+    const apiMac = `https://api.github.com/repos/${repoMac}/releases/latest`;
+    const apiWin = `https://api.github.com/repos/${repoWin}/releases/latest`;
 
     try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) throw new Error('Network response was not ok');
-        const data = await response.json();
+        // Fetch both releases in parallel
+        const [resMac, resWin] = await Promise.all([
+            fetch(apiMac).catch(e => null),
+            fetch(apiWin).catch(e => null)
+        ]);
 
-        // Find the download asset (usually .dmg or .zip)
-        const asset = data.assets.find(a => a.name.endsWith('.dmg')) ||
-            data.assets.find(a => a.name.endsWith('.zip')) ||
-            data.assets[0];
+        let macData = null;
+        let winData = null;
 
-        if (asset && asset.browser_download_url) {
-            const downloadUrl = asset.browser_download_url;
-            const version = data.tag_name;
+        if (resMac && resMac.ok) macData = await resMac.json();
+        if (resWin && resWin.ok) winData = await resWin.json();
 
-            // Update all download buttons
-            const downloadBtns = document.querySelectorAll('.btn-primary, .btn-download');
-            if (downloadBtns.length > 0) {
-                downloadBtns.forEach(btn => {
-                    btn.href = downloadUrl;
-                });
-            }
-
-            // Update version using i18n system
+        // 1. Process macOS Assets (from vexar-app)
+        let macAsset = null;
+        let macVersion = 'v1.0.0'; // Fallback
+        
+        if (macData) {
+            macVersion = macData.tag_name;
+            macAsset = macData.assets.find(a => a.name.endsWith('.dmg')) ||
+                       macData.assets.find(a => a.name.endsWith('.zip'));
+            
+            // Update version in i18n
             if (window.i18nInstance) {
-                window.i18nInstance.setVersion(version);
-            }
-
-            // Update version text in download section
-            const btnSub = document.querySelector('.btn-sub');
-            if (btnSub) {
-                const extension = asset.name.split('.').pop().toUpperCase();
-                btnSub.textContent = `macOS 13.0+ • ${extension}`;
+                window.i18nInstance.setVersion(macVersion); 
             }
         }
+
+        // 2. Process Windows Assets (from vexar-windows)
+        let winAssetExe = null;
+        let winAssetMsi = null;
+        
+        if (winData) {
+            winAssetExe = winData.assets.find(a => a.name.endsWith('.exe'));
+            winAssetMsi = winData.assets.find(a => a.name.endsWith('.msi'));
+        }
+
+        // 3. Update macOS Button
+        const btnMac = document.getElementById('btn-download-mac');
+        if (btnMac) {
+             if (macAsset) {
+                btnMac.href = macAsset.browser_download_url;
+                const ext = macAsset.name.split('.').pop().toUpperCase();
+                const verSpan = document.getElementById('ver-mac');
+                if (verSpan) verSpan.textContent = `macOS 13.0+ • ${ext}`;
+             } else {
+                 btnMac.href = `https://github.com/${repoMac}/releases/latest`;
+             }
+        }
+
+        // 4. Update Windows Buttons (EXE & MSI)
+        const btnWinExe = document.getElementById('btn-download-win-exe');
+        const btnWinMsi = document.getElementById('btn-download-win-msi');
+
+        if (btnWinExe) {
+            if (winAssetExe) {
+                btnWinExe.href = winAssetExe.browser_download_url;
+                const verSpan = document.getElementById('ver-win-exe');
+                if (verSpan) verSpan.textContent = `Windows 10/11 • EXE`;
+            } else {
+                btnWinExe.href = `https://github.com/${repoWin}/releases/latest`;
+            }
+        }
+
+        if (btnWinMsi) {
+            if (winAssetMsi) {
+                btnWinMsi.href = winAssetMsi.browser_download_url;
+                const verSpan = document.getElementById('ver-win-msi');
+                if (verSpan) verSpan.textContent = `Windows 10/11 • MSI`;
+            } else {
+                // If MSI not found, hide or fallback
+                // For now fallback to repo
+                btnWinMsi.href = `https://github.com/${repoWin}/releases/latest`;
+            }
+        }
+
+        // 5. Update Hero Button (Smart Button)
+        // Robust OS Detection
+        const platform = navigator.platform.toLowerCase();
+        const userAgent = navigator.userAgent.toLowerCase();
+        const isWindows = platform.includes('win') || userAgent.includes('windows');
+        const isMac = platform.includes('mac') || userAgent.includes('macintosh');
+        
+        // Default to Windows if not Mac (or explicit Windows)
+        // If we can't determine, we usually prefer Windows as it has more market share, 
+        // or we could show a generic release page. 
+        // For this tailored app, we'll assume Windows if not Mac.
+        const targetOS = isMac ? 'macOS' : 'Windows';
+
+        const heroBtn = document.querySelector('.hero-actions .btn-primary');
+        if (heroBtn) {
+            if (targetOS === 'Windows') {
+                if (winAssetExe) heroBtn.href = winAssetExe.browser_download_url;
+                else if (winAssetMsi) heroBtn.href = winAssetMsi.browser_download_url;
+                else heroBtn.href = `https://github.com/${repoWin}/releases/latest`;
+            } else {
+                 // macOS
+                 if (macAsset) heroBtn.href = macAsset.browser_download_url;
+                 else heroBtn.href = `https://github.com/${repoMac}/releases/latest`;
+            }
+        }
+
+        // Update i18n OS detection
+        // This updates the text "Download for Windows" / "Download for macOS"
+        if (window.i18nInstance) {
+             window.i18nInstance.setOS(targetOS);
+        }
+
     } catch (error) {
-        console.error('Error fetching latest release:', error);
+        console.error('Error fetching latest releases:', error);
     }
 }

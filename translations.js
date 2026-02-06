@@ -2,7 +2,7 @@
 const translations = {
     en: {
         // Meta
-        "meta.title": "Vexar - Seamless Discord Experience for macOS",
+        "meta.title": "Vexar - Seamless Discord Experience for macOS & Windows",
 
         // Navigation
         "nav.features": "Features",
@@ -13,9 +13,9 @@ const translations = {
         // Hero Section
         "hero.badge": "{version} Now Available",
         "hero.titleLine1": "Seamless Discord",
-        "hero.titleLine2": "Experience on macOS",
-        "hero.description": "One-click solution for unrestricted Discord access. Vexar lives in your menu bar, silently ensuring you never miss a moment with friends.",
-        "hero.downloadBtn": "Download for macOS",
+        "hero.titleLine2": "Experience",
+        "hero.description": "One-click solution for unrestricted Discord access. Vexar lives in your menu bar or system tray, silently ensuring you never miss a moment with friends.",
+        "hero.downloadBtn": "Download for {os}",
         "hero.learnMore": "Learn More",
         "hero.stat1": "Free & Open Source",
         "hero.stat2": "Click to Connect",
@@ -24,7 +24,7 @@ const translations = {
         "hero.statusSub": "Discord is running smoothly",
         "hero.float1": "Privacy First",
         "hero.float2": "Lightning Fast",
-        "hero.float3": "Native macOS",
+        "hero.float3": "Native App",
 
         // Trusted Section
         "trusted.text": "Trusted by Discord users worldwide",
@@ -34,13 +34,13 @@ const translations = {
         "features.title": "Everything you need,<br>nothing you don't",
         "features.description": "Vexar is designed to be invisible. It works quietly in the background, ensuring you have uninterrupted access to Discord.",
         "features.oneClick.title": "One-Click Connection",
-        "features.oneClick.description": "Connect with a single click from your menu bar. No complicated setup, no configuration files. Just pure simplicity.",
+        "features.oneClick.description": "Connect with a single click from your menu bar or system tray. No complicated setup, no configuration files. Just pure simplicity.",
         "features.privacy.title": "Privacy First",
         "features.privacy.description": "Your data stays on your device. No tracking, no logs, no compromise.",
         "features.fast.title": "Lightning Fast",
         "features.fast.description": "Zero latency impact. Your Discord experience remains smooth and responsive.",
-        "features.native.title": "Native macOS",
-        "features.native.description": "Built with SwiftUI for a seamless macOS experience. Feels right at home.",
+        "features.native.title": "Native Performance",
+        "features.native.description": "Built with native technologies for macOS and Windows. Lightweight and feels right at home.",
         "features.opensource.title": "Open Source",
         "features.opensource.description": "Completely free and open source. Contribute, audit, or fork as you like.",
         "features.auto.title": "Auto Start",
@@ -51,33 +51,39 @@ const translations = {
         "how.title": "Simple. Elegant. Effective.",
         "how.description": "Get started in minutes with our streamlined setup process.",
         "how.step1.title": "Download & Install",
-        "how.step1.description": "Download the Vexar DMG from GitHub. Open it and drag the app to your Applications folder.",
+        "how.step1.description": "Download Vexar from GitHub releases. Install it on your Windows or macOS device.",
         "how.step2.title": "Complete Setup",
         "how.step2.description": "Follow the one-time setup wizard to install required components automatically.",
         "how.step3.title": "Click & Connect",
-        "how.step3.description": "Click the Vexar icon in your menu bar and hit connect. That's it!",
+        "how.step3.description": "Click the Vexar icon in your menu bar or system tray and hit connect. That's it!",
 
         // Tech Section
         "tech.badge": "Built With",
         "tech.title": "Modern Technology Stack",
-        "tech.swiftui": "Native macOS interface",
+        "tech.swiftui": "Native Performance",
         "tech.spoofdpi": "Bypass engine",
-        "tech.homebrew": "Package manager",
+        "tech.homebrew": "Auto-updates",
         "tech.opensource": "MIT License",
 
         // Download Section
         "download.badge": "Free Download",
         "download.title": "Ready to start?",
-        "download.description": "Download Vexar now and enjoy seamless Discord experience on your Mac.",
+        "download.description": "Download Vexar now and enjoy seamless Discord experience on your computer.",
         "download.button": "Download",
+        "download.buttonWin": "Download for Windows",
+        "download.buttonWinExe": "Windows EXE",
+        "download.buttonWinMsi": "Windows MSI",
+        "download.buttonMac": "Download for macOS",
         "download.github": "View on GitHub",
+        "download.githubWin": "GitHub (Windows)",
+        "download.githubMac": "GitHub (macOS)",
         "download.info1": "No account required",
         "download.info2": "100% Free & Open Source",
         "download.info3": "Privacy focused",
-        "download.note": "Download the DMG file, open it, and drag Vexar.app to your Applications folder.",
+        "download.note": "Download the installer, run it, and enjoy freedom.",
 
         // Footer
-        "footer.tagline": "Seamless Discord experience for macOS",
+        "footer.tagline": "Seamless Discord experience for everyone",
         "footer.product": "Product",
         "footer.resources": "Resources",
         "footer.issues": "Report Issue",
@@ -88,30 +94,19 @@ const translations = {
         "footer.copyright": "© 2026 Vexar. All rights reserved.",
         "footer.madeWith": "Made with ❤️ for the Discord community",
 
-        // Testimonials Section
-        "testimonials.badge": "Testimonials",
-        "testimonials.title": "Loved by users",
-        "testimonials.t1.text": "\"Finally, a solution that just works! I've been struggling with Discord access for months, and Vexar solved it in seconds.\"",
-        "testimonials.t1.name": "Liam Anderson",
-        "testimonials.t1.role": "Hardcore Gamer",
-        "testimonials.t2.text": "\"Clean, minimal, and does exactly what it promises. The SwiftUI interface is beautiful and fits perfectly with macOS.\"",
-        "testimonials.t2.name": "Olivia Smith",
-        "testimonials.t2.role": "UI/UX Designer",
-        "testimonials.t3.text": "\"I love that it's open source. I can see exactly what it does, and there's no shady background activity. Highly recommended!\"",
-        "testimonials.t3.name": "Noah Williams",
-        "testimonials.t3.role": "Software Engineer",
+
 
         // FAQ Section
         "faq.badge": "FAQ",
         "faq.title": "Frequently Asked Questions",
         "faq.q1.question": "What is Vexar?",
-        "faq.q1.answer": "Vexar is a macOS menu bar application that helps you access Discord without restrictions. It uses SpoofDPI technology to bypass network limitations while maintaining your privacy.",
+        "faq.q1.answer": "Vexar is a desktop application that helps you access Discord without restrictions. It uses SpoofDPI technology to bypass network limitations while maintaining your privacy.",
         "faq.q2.question": "Is Vexar safe to use?",
         "faq.q2.answer": "Yes! Vexar is completely open source, which means anyone can review the code. We don't collect any personal data, and all connections stay local on your device.",
         "faq.q3.question": "Does it affect my internet speed?",
         "faq.q3.answer": "No, Vexar operates locally and has zero impact on your internet latency. Your Discord experience remains as fast as ever.",
-        "faq.q4.question": "What macOS version is required?",
-        "faq.q4.answer": "Vexar requires macOS 13.0 (Ventura) or later. It's built with the latest SwiftUI features to provide the best possible experience.",
+        "faq.q4.question": "What OS version is required?",
+        "faq.q4.answer": "Vexar supports macOS 13.0+ and modern Windows versions. It's built to provide the best possible experience on both platforms.",
         "faq.q5.question": "How do I get support?",
         "faq.q5.answer": "You can open an issue on our GitHub repository, and we'll help you as soon as possible. The community is also very helpful!",
 
@@ -144,7 +139,7 @@ const translations = {
     },
     tr: {
         // Meta
-        "meta.title": "Vexar - macOS için Kesintisiz Discord Deneyimi",
+        "meta.title": "Vexar - macOS & Windows için Kesintisiz Discord Deneyimi",
 
         // Navigation
         "nav.features": "Özellikler",
@@ -155,9 +150,9 @@ const translations = {
         // Hero Section
         "hero.badge": "{version} Yayında",
         "hero.titleLine1": "Kesintisiz Discord",
-        "hero.titleLine2": "macOS Deneyimi",
-        "hero.description": "Sınırsız Discord erişimi için tek tıklık çözüm. Vexar menü çubuğunuzda yaşar, arkadaşlarınızla hiçbir anı kaçırmamanızı sessizce sağlar.",
-        "hero.downloadBtn": "macOS için İndir",
+        "hero.titleLine2": "Deneyimi",
+        "hero.description": "Sınırsız Discord erişimi için tek tıklık çözüm. Vexar menü çubuğunuzda veya sistem tepsinizde yaşar, arkadaşlarınızla hiçbir anı kaçırmamanızı sessizce sağlar.",
+        "hero.downloadBtn": "{os} için İndir",
         "hero.learnMore": "Daha Fazla Bilgi",
         "hero.stat1": "Ücretsiz & Açık Kaynak",
         "hero.stat2": "Tek Tıkla Bağlan",
@@ -166,12 +161,12 @@ const translations = {
         "hero.statusSub": "Discord sorunsuz çalışıyor",
         "hero.float1": "Gizlilik Öncelikli",
         "hero.float2": "Işık Hızında",
-        "hero.float3": "Native macOS",
+        "hero.float3": "Native Uygulama",
 
         // Trusted Section
         "trusted.text": "Dünya genelinde Discord kullanıcıları tarafından güveniliyor",
 
-        // Features Section
+        // Features Sections
         "features.badge": "Özellikler",
         "features.title": "İhtiyacınız olan her şey,<br>gereksiz hiçbir şey",
         "features.description": "Vexar görünmez olmak için tasarlandı. Arka planda sessizce çalışır, Discord'a kesintisiz erişiminizi sağlar.",
@@ -181,8 +176,8 @@ const translations = {
         "features.privacy.description": "Verileriniz cihazınızda kalır. Takip yok, log yok, taviz yok.",
         "features.fast.title": "Işık Hızında",
         "features.fast.description": "Sıfır gecikme etkisi. Discord deneyiminiz pürüzsüz ve duyarlı kalır.",
-        "features.native.title": "Native macOS",
-        "features.native.description": "Kusursuz macOS deneyimi için SwiftUI ile geliştirildi. Evinizde gibi hissettirin.",
+        "features.native.title": "Native Performans",
+        "features.native.description": "macOS ve Windows için yerel teknolojilerle geliştirildi. Sisteminizle tam uyumlu.",
         "features.opensource.title": "Açık Kaynak",
         "features.opensource.description": "Tamamen ücretsiz ve açık kaynak. İstediğiniz gibi katkıda bulunun, denetleyin veya fork'layın.",
         "features.auto.title": "Otomatik Başlat",
@@ -193,33 +188,39 @@ const translations = {
         "how.title": "Basit. Şık. Etkili.",
         "how.description": "Kolaylaştırılmış kurulum sürecimizle dakikalar içinde başlayın.",
         "how.step1.title": "İndir & Kur",
-        "how.step1.description": "Vexar DMG dosyasını indirin. Dosyayı açın ve uygulamayı Uygulamalar klasörüne sürükleyin.",
+        "how.step1.description": "GitHub üzerinden Vexar'ı indirin. Windows veya macOS cihazınıza kurun.",
         "how.step2.title": "Kurulumu Tamamla",
         "how.step2.description": "Gerekli bileşenleri otomatik olarak kurmak için tek seferlik kurulum sihirbazını takip edin.",
         "how.step3.title": "Tıkla & Bağlan",
-        "how.step3.description": "Menü çubuğundaki Vexar ikonuna tıklayın ve bağlan butonuna basın. Bu kadar!",
+        "how.step3.description": "Sistem tepsinizdeki Vexar ikonuna tıklayın ve bağlan butonuna basın. Bu kadar!",
 
         // Tech Section
         "tech.badge": "Teknolojiler",
         "tech.title": "Modern Teknoloji Yığını",
-        "tech.swiftui": "Native macOS arayüzü",
+        "tech.swiftui": "Native Performans",
         "tech.spoofdpi": "Bypass motoru",
-        "tech.homebrew": "Paket yöneticisi",
+        "tech.homebrew": "Otomatik Güncelleme",
         "tech.opensource": "MIT Lisansı",
 
         // Download Section
         "download.badge": "Ücretsiz İndir",
         "download.title": "Başlamaya hazır mısınız?",
-        "download.description": "Vexar'ı şimdi indirin ve Mac'inizde kesintisiz Discord deneyiminin tadını çıkarın.",
+        "download.description": "Vexar'ı şimdi indirin ve bilgisayarınızda kesintisiz Discord deneyiminin tadını çıkarın.",
         "download.button": "İndir",
+        "download.buttonWin": "Windows için İndir",
+        "download.buttonWinExe": "Windows EXE",
+        "download.buttonWinMsi": "Windows MSI",
+        "download.buttonMac": "macOS için İndir",
         "download.github": "GitHub'da Görüntüle",
+        "download.githubWin": "GitHub (Windows)",
+        "download.githubMac": "GitHub (macOS)",
         "download.info1": "Hesap gerektirmez",
         "download.info2": "100% Ücretsiz & Açık Kaynak",
         "download.info3": "Gizlilik odaklı",
-        "download.note": "DMG dosyasını indirin, açın ve Vexar.app'i Uygulamalar klasörüne sürükleyin.",
+        "download.note": "Kurulum dosyasını indirin, çalıştırın ve özgürlüğün tadını çıkarın.",
 
         // Footer
-        "footer.tagline": "macOS için kesintisiz Discord deneyimi",
+        "footer.tagline": "Herkes için kesintisiz Discord deneyimi",
         "footer.product": "Ürün",
         "footer.resources": "Kaynaklar",
         "footer.issues": "Sorun Bildir",
@@ -230,33 +231,22 @@ const translations = {
         "footer.copyright": "© 2026 Vexar. Tüm hakları saklıdır.",
         "footer.madeWith": "Discord topluluğu için ❤️ ile yapıldı",
 
-        // Testimonials Section
-        "testimonials.badge": "Kullanıcı Yorumları",
-        "testimonials.title": "Kullanıcılar tarafından seviliyor",
-        "testimonials.t1.text": "\"Sonunda her zaman çalışan bir çözüm! Aylardır Discord erişimiyle boğuşuyordum, Vexar saniyeler içinde halletti.\"",
-        "testimonials.t1.name": "Arda Yılmaz",
-        "testimonials.t1.role": "Hardcore Gamer",
-        "testimonials.t2.text": "\"Temiz, minimal ve tam olarak vaat ettiği şeyi yapıyor. SwiftUI arayüzü şahane ve macOS estetiğiyle birebir uyumlu.\"",
-        "testimonials.t2.name": "Zeynep Demir",
-        "testimonials.t2.role": "UI/UX Designer",
-        "testimonials.t3.text": "\"Açık kaynak olması içimi rahatlatıyor. Arka planda neler döndüğünü görebiliyorum, hiçbir şüpheli işlem yok. Kesinlikle tavsiye.\"",
-        "testimonials.t3.name": "Can Özkan",
-        "testimonials.t3.role": "Yazılım Mühendisi",
+
 
         // FAQ Section
         "faq.badge": "SSS",
         "faq.title": "Sıkça Sorulan Sorular",
         "faq.q1.question": "Vexar nedir?",
-        "faq.q1.answer": "Vexar, Discord'a kısıtlama olmadan erişmenize yardımcı olan bir macOS menü çubuğu uygulamasıdır. Gizliliğinizi korurken ağ kısıtlamalarını aşmak için SpoofDPI teknolojisini kullanır.",
+        "faq.q1.answer": "Vexar, Discord'a kısıtlama olmadan erişmenize yardımcı olan bir masaüstü uygulamasıdır. Gizliliğinizi korurken ağ kısıtlamalarını aşmak için SpoofDPI teknolojisini kullanır.",
         "faq.q2.question": "Vexar kullanmak güvenli mi?",
         "faq.q2.answer": "Evet! Vexar tamamen açık kaynaklıdır, yani herkes kodu inceleyebilir. Hiçbir kişisel veri toplamıyoruz ve tüm bağlantılar cihazınızda yerel olarak kalıyor.",
         "faq.q3.question": "İnternet hızımı etkiler mi?",
         "faq.q3.answer": "Hayır, Vexar yerel olarak çalışır ve internet gecikmeniz üzerinde sıfır etkisi vardır. Discord deneyiminiz her zamanki gibi hızlı kalır.",
-        "faq.q4.question": "Hangi macOS sürümü gerekli?",
-        "faq.q4.answer": "Vexar, macOS 13.0 (Ventura) veya üstünü gerektirir. En iyi deneyimi sağlamak için en son SwiftUI özellikleriyle geliştirilmiştir.",
+        "faq.q4.question": "Hangi işletim sistemi gerekli?",
+        "faq.q4.answer": "Vexar, macOS 13.0+ ve modern Windows sürümlerini destekler. Her iki platformda da en iyi deneyimi sunmak için optimize edilmiştir.",
         "faq.q5.question": "Nasıl destek alabilirim?",
         "faq.q5.answer": "GitHub repomuzda bir sorun açabilirsiniz, size en kısa sürede yardımcı olacağız. Topluluk da çok yardımsever!",
-
+        
         // Gizlilik Politikası Sayfası
         "privacy.title": "Gizlilik Politikası",
         "privacy.lastUpdated": "Son güncelleme: 16 Ocak 2026",
@@ -291,6 +281,16 @@ class I18n {
     constructor() {
         this.currentLang = this.detectLanguage();
         this.version = 'v1.0.0'; // Default version
+        this.os = 'Windows'; // Default OS
+        
+        // Try to detect OS
+        const platform = navigator.platform.toLowerCase();
+        const userAgent = navigator.userAgent.toLowerCase();
+        
+        if (platform.includes('mac') || userAgent.includes('macintosh')) {
+            this.os = 'macOS';
+        }
+
         this.init();
     }
 
@@ -324,6 +324,11 @@ class I18n {
                 // Handle placeholders like {version}
                 if (translation.includes('{version}')) {
                     translation = translation.replace('{version}', this.version);
+                }
+                
+                 // Handle {os} placeholder
+                if (translation.includes('{os}')) {
+                    translation = translation.replace('{os}', this.os);
                 }
 
                 // Check if it contains HTML (like <br>)
@@ -386,6 +391,11 @@ class I18n {
 
     setVersion(version) {
         this.version = version;
+        this.applyTranslations();
+    }
+    
+    setOS(osName) {
+        this.os = osName;
         this.applyTranslations();
     }
 }
