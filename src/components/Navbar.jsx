@@ -69,13 +69,14 @@ const Navbar = () => {
             <span className="donate-icon">☕</span>
             <span className="donate-text">{t('nav.donate')}</span>
           </a>
+          
+          <Link to="/download" className="nav-cta">
+            {t('nav.getVexar')}
+          </Link>
           <button className="lang-switcher" id="langSwitcher" onClick={toggleLanguage} aria-label="Switch Language">
             <span className="lang-icon">🌐</span>
             <span className="lang-text" id="currentLang">{currentLang.toUpperCase()}</span>
           </button>
-          <Link to="/download" className="nav-cta">
-            {t('nav.getVexar')}
-          </Link>
         </div>
 
         <button
