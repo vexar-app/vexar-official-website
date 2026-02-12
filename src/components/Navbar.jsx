@@ -65,7 +65,7 @@ const Navbar = () => {
         </div>
 
         <div className="nav-actions">
-          <a href="https://www.patreon.com/cw/ConsolAktif" target="_blank" rel="noopener noreferrer" className="nav-donate">
+          <a href="https://www.patreon.com/join/ConsolAktif" target="_blank" rel="noopener noreferrer" className="nav-donate">
             <span className="donate-icon">☕</span>
             <span className="donate-text">{t('nav.donate')}</span>
           </a>
