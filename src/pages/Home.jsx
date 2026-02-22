@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import ShowcaseSection from '../components/ShowcaseSection';
 import Trusted from '../components/Trusted';
 import Features from '../components/Features';
 import PlatformShowcase from '../components/PlatformShowcase';
@@ -20,6 +21,7 @@ const Home = () => {
             <Navbar />
             <main>
                 <Hero />
+                <ShowcaseSection />
                 <Trusted />
                 <Features />
                 <PlatformShowcase />

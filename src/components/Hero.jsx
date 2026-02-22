@@ -116,6 +116,7 @@ const Hero = () => {
 
   const titleWords1 = t('hero.titleLine1').split(' ');
   const titleWords2 = t('hero.titleLine2').split(' ');
+  const titleWords3 = t('hero.titleLine3') ? t('hero.titleLine3').split(' ') : [];
 
   // Particles data
   const particles = [
@@ -190,6 +191,25 @@ const Hero = () => {
                     </motion.span>
                     ))}
                 </motion.div>
+                {titleWords3.length > 0 && (
+                    <motion.div
+                        style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
+                        variants={container}
+                        initial="hidden"
+                        animate="visible"
+                        className="hero-title-line3"
+                    >
+                        {titleWords3.map((word, index) => (
+                        <motion.span
+                            variants={child}
+                            style={{ display: "inline-block" }}
+                            key={index}
+                        >
+                            {word}
+                        </motion.span>
+                        ))}
+                    </motion.div>
+                )}
             </h1>
             
             <motion.p 
@@ -233,7 +253,11 @@ const Hero = () => {
                 <div className="stat-divider"></div>
                 <StatCounter target={1} suffix="" label={t('hero.stat2')} />
                 <div className="stat-divider"></div>
-                <StatCounter target={0} suffix="ms" label={t('hero.stat3')} />
+                <div className="stat">
+                    <span className="stat-number" style={{ background: 'var(--gradient-accent)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>0</span>
+                    <span className="stat-suffix" style={{ background: 'var(--gradient-accent)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>ms</span>
+                    <span className="stat-label">{t('hero.stat3')}</span>
+                </div>
             </div>
         </div>
 
@@ -291,7 +315,7 @@ const Hero = () => {
                     animate={{ y: [0, -12, 0], rotate: [0, 2, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 >
-                    <span className="float-icon">🔒</span>
+                    <span className="float-icon">⚡</span>
                     <span>{t('hero.float1')}</span>
                 </motion.div>
                 <motion.div 
@@ -299,15 +323,15 @@ const Hero = () => {
                     animate={{ y: [0, -8, 0], rotate: [0, -1, 0] }}
                     transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 >
-                    <span className="float-icon">⚡</span>
-                    <span>{t('hero.float2')}</span>
+                    <span className="float-icon">🟢</span>
+                    <span style={{ color: 'var(--color-accent)' }}>{t('hero.float2')}</span>
                 </motion.div>
                 <motion.div 
                     className="float-card float-3"
                     animate={{ y: [0, -10, 0], rotate: [0, 1.5, 0] }}
                     transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
                 >
-                    <span className="float-icon">💻</span>
+                    <span className="float-icon">🖱️</span>
                     <span>{t('hero.float3')}</span>
                 </motion.div>
             </div>
